@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangMana", "MangMana\MangMana.csproj", "{44C7B6B4-503B-4C3E-8F0D-71638B5F5B9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EEDD988-2547-4998-8AA9-8BE10272A672}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44C7B6B4-503B-4C3E-8F0D-71638B5F5B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C7B6B4-503B-4C3E-8F0D-71638B5F5B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C7B6B4-503B-4C3E-8F0D-71638B5F5B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C7B6B4-503B-4C3E-8F0D-71638B5F5B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {442225E9-3961-40BA-8E78-136F12CD42D4}
+	EndGlobalSection
+EndGlobal

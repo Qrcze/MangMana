@@ -1,0 +1,27 @@
+﻿<Window x:Class="MangMana.Views.BatchAddCharactersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Add characters batch" Height="450" Width="800" Background="#353535">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+		<Menu>
+			<MenuItem Header="Help">
+				<MenuItem Header="How to" Command="{Binding ShowInfoMessageCommand}" />
+			</MenuItem>
+		</Menu>
+
+		<TextBox Margin="5" Grid.Row="1" AcceptsReturn="True" Text="{Binding Text}" />
+
+		<StackPanel Grid.Row="2" HorizontalAlignment="Right" Orientation="Horizontal">
+			<Button Content="Import" Margin="5" Width="80" Command="{Binding ImportCommand}" />
+			<Button Content="Cancel" Margin="5" Width="80" Command="{Binding CloseCommand}" />
+		</StackPanel>
+	</Grid>
+</Window>

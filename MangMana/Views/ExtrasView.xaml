@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="MangMana.Views.ExtrasView"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:viewmodels="clr-namespace:MangMana.ViewModels"
+			 mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+	<UserControl.DataContext>
+		<viewmodels:ExtrasViewModel />
+	</UserControl.DataContext>
+	<Grid AllowDrop="{Binding EditMode}" Drop="ImageDrop" Background="Transparent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+		<Grid Grid.Row="0">
+			<Button Style="{StaticResource LockButton}" />
+
+			<Image Source="{Binding CurrentImage}">
+				<Image.ContextMenu>
+					<ContextMenu>
+						<MenuItem Header="Open image in explorer" Command="{Binding OpenImageCommand}" />
+					</ContextMenu>
+				</Image.ContextMenu>
+			</Image>
+			<Grid HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="{Binding EditModeVisibility}" Margin="5">
+				<Border Background="Black" Opacity=".5" CornerRadius="5" />
+				<!--<Grid Background="Gray" Opacity=".5" />-->
+				<StackPanel Orientation="Vertical">
+					<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+						<Button Style="{StaticResource BackButton}" ToolTip="Move image back"
+											Command="{Binding ShiftImageBackCommand}" />
+						<Button Style="{StaticResource ForwardButton}" ToolTip="Move image forward"
+											Command="{Binding ShiftImageFwdCommand}" />
+					</StackPanel>
+					<Button Margin="3" Content="Add Image" Command="{Binding AddImageCommand}" Focusable="False" />
+					<Button Margin="3" Content="Clipboard" Command="{Binding AddImageFromClipboardCommand}" ToolTip="Add image from clipboard" Focusable="False" />
+					<Button Margin="3" Content="Remove Image" Command="{Binding RemoveImageCommand}" Focusable="False" />
+				</StackPanel>
+			</Grid>
+		</Grid>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1">
+			<Button Style="{StaticResource BackButton}" Command="{Binding PrevImageCommand}" />
+			<Button Style="{StaticResource ForwardButton}" Command="{Binding NextImageCommand}" />
+		</StackPanel>
+	</Grid>
+</UserControl>

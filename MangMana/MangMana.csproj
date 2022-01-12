@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>supermana.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\back.png" />
+    <None Remove="Icons\clear.png" />
+    <None Remove="Icons\lock.png" />
+    <None Remove="Icons\next.png" />
+    <None Remove="Icons\placeholder.png" />
+    <None Remove="Icons\unlock.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PropertyChanged.Fody" Version="3.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\back.png" />
+    <Resource Include="Icons\clear.png" />
+    <Resource Include="Icons\lock.png" />
+    <Resource Include="Icons\next.png" />
+    <Resource Include="Icons\placeholder.png" />
+    <Resource Include="Icons\unlock.png" />
+  </ItemGroup>
+
+</Project>
