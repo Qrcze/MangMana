@@ -4,12 +4,12 @@ A comprehensive, private comic/book/show/movie manager for people whose memory i
 ![sample](sample1.png)
 
 ## Table of contents
- - [Features]
-   - [Book info]
-   - [Characters list]
-   - [Extras]
- - [Technologies]
- - [Credits]
+ - [Features](#features)
+   - [Book info](#book-info)
+   - [Characters list](#characters-list)
+   - [Extras](#extras)
+ - [Technologies](#technologies)
+ - [Credits](#credits)
 
 ## Features
 #### Book info
